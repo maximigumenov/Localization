@@ -1,0 +1,42 @@
+﻿[
+  {
+    "key": "main_previouScene",
+    "value": "Previous scene"
+  },
+  {
+    "key": "main_nextScene",
+    "value": "Next scene"
+  },
+  {
+    "key": "main_previouLang",
+    "value": "Previous language"
+  },
+  {
+    "key": "main_nextLang",
+    "value": "Next language"
+  },
+  {
+    "key": "nameScene_main",
+    "value": "Main"
+  },
+  {
+    "key": "nameScene_excerpt",
+    "value": "Excerpt"
+  },
+  {
+    "key": "lang_rus",
+    "value": "Russian"
+  },
+  {
+    "key": "lang_eng",
+    "value": "English"
+  },
+  {
+    "key": "main_data",
+    "value": "Data"
+  },
+  {
+    "key": "main_leng",
+    "value": "Words in the dictionary"
+  }
+]

@@ -1,0 +1,42 @@
+﻿[
+  {
+    "key": "main_previouScene",
+    "value": "Предыдущая сцена"
+  },
+  {
+    "key": "main_nextScene",
+    "value": "Следующая сцена"
+  },
+  {
+    "key": "main_previouLang",
+    "value": "Предыдущий язык"
+  },
+  {
+    "key": "main_nextLang",
+    "value": "Следующий язык"
+  },
+  {
+    "key": "nameScene_main",
+    "value": "Главная"
+  },
+  {
+    "key": "nameScene_excerpt",
+    "value": "Отрывок"
+  },
+  {
+    "key": "lang_rus",
+    "value": "Русский"
+  },
+  {
+    "key": "lang_eng",
+    "value": "Английский"
+  },
+  {
+    "key": "main_data",
+    "value": "Данные"
+  },
+  {
+    "key": "main_leng",
+    "value": "Слов в словаре"
+  }
+]

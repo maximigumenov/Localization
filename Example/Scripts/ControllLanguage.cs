@@ -2,19 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LocalizationSpace;
 
 public class ControllLanguage : MonoBehaviour 
 	{
 		[SerializeField] List<DataLanguage> languages;
-		int numLang = 0;
 		public DataButton previousLang;
 		public DataButton nextLang;
 		public DataButton nowLang;
-
-
-		public delegate void MethodContainer();
-		public event MethodContainer onCount;
-
 
 		[System.Serializable]
 		public class DataLanguage{
@@ -38,7 +33,7 @@ public class ControllLanguage : MonoBehaviour
 			[SerializeField] Text textButton;
 
 			public void SelectLang(){
-				LocalizationSpace.Localization.SelectLanguage (dataLanguage.GetId());
+				Localization.SelectLanguage (dataLanguage.GetId());
 			}
 
 			public void SetDataLanguage(DataLanguage _dataLanguage){
@@ -46,10 +41,20 @@ public class ControllLanguage : MonoBehaviour
 			}
 
 			public void SetKey(){
-				textButton.text = LocalizationSpace.Localization.GetText (dataLanguage.GetKey());
+				textButton.text = Localization.GetText (dataLanguage.GetKey());
 			}
 		}
 
+
+	public void InitLanguages(){
+		for (int i = 0; i < languages.Count; i++) {
+			if (languages [0].GetId() != LocalizationSetting.nowId) {
+				break;
+			} else {
+				MoveForward ();
+			}
+		}
+	}
 
 		public void UpdateLanguages(){
 			nowLang.SetDataLanguage (languages [0]);

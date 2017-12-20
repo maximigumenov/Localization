@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LocalizationSpace;
 
 public class DataController : MonoBehaviour {
 
@@ -9,8 +10,8 @@ public class DataController : MonoBehaviour {
 
 	public void TotalWord(){
 		if(totalField){
-			totalField.text = LocalizationSpace.Localization.GetText ("main_leng") + 
-				" " + LocalizationSpace.Localization.GetTotalWord ().ToString();
+			totalField.text = Localization.GetText ("main_leng") + 
+				" " + Localization.GetTotalWord ().ToString();
 		} 
 	}
 }

@@ -9,7 +9,7 @@ namespace LocalizationSpace{
 		public string key; 
 
 
-		[HideInInspector] public Text localizationText { get { 
+		private Text localizationText { get { 
 				if (GetComponent<Text> ()) {	
 					return GetComponent<Text> ();
 				} else {
@@ -23,7 +23,6 @@ namespace LocalizationSpace{
 			UpdateLocalization ();
 		}
    
-	
 		public override void UpdateLocalization ()
 		{
 			if (localizationText != null) {

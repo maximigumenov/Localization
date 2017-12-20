@@ -6,7 +6,14 @@ using System.IO;
 
 public static class ControllCreateAsset
 {
-	
+	/// <summary>
+	/// Creates the asset.
+	/// </summary>
+	/// <param name="pathJson">Path json.</param>
+	/// <param name="pathSave">Path save.</param>
+	/// <param name="fieldName">Field name.</param>
+	/// <param name="nameAsset">Name asset.</param>
+	/// <typeparam name="T">The 1st type parameter.</typeparam>
 	public static void CreateAsset<T> (string pathJson, string pathSave, string fieldName, string nameAsset) where T : ScriptableObject
 	{
 		T asset = ScriptableObject.CreateInstance<T> ();
@@ -22,12 +29,24 @@ public static class ControllCreateAsset
 		AssetDatabase.Refresh();
 	}
 
+	/// <summary>
+	/// From the json overwrite arr.
+	/// </summary>
+	/// <param name="json_array">Json array.</param>
+	/// <param name="fieldName">Field name.</param>
+	/// <param name="obj">Object.</param>
 	public static void FromJsonOverwriteArr(string json_array, string fieldName, object obj)
 	{
 		json_array = WrapArray(json_array, fieldName);
 		JsonUtility.FromJsonOverwrite(json_array, obj);
 	}
 
+	/// <summary>
+	/// Wraps the array.
+	/// </summary>
+	/// <returns>The array.</returns>
+	/// <param name="json_array">Json array.</param>
+	/// <param name="fieldName">Field name.</param>
 	private static string WrapArray(string json_array, string fieldName)
 	{
 		return "{\"" + fieldName + "\":" + json_array + "}";

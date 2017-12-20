@@ -18,7 +18,5 @@ public class ControllScene : MonoBehaviour
 			public void SelectScene(){
 				SceneManager.LoadScene (nameScene);
 			}
-
-			
 		}
 	}
